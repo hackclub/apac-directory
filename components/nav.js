@@ -3,10 +3,12 @@
 import Image from "next/image";
 import { Container, Button } from "theme-ui";
 
+import flag_src from "../public/flag.png";
+
 const Nav = ({ ...props }) => {
   return (
     <Container {...props} sx={{ display: "flex", alignItems: "center" }}>
-      <Image src={"/../public/flag.png"} width={72 * 1.5} height={40 * 1.5} />
+      <Image src={flag_src} width={72 * 1.5} height={40 * 1.5} />
       <Button
         as="a"
         href="https://hackclub.com"
