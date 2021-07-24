@@ -1,7 +1,15 @@
-import '../styles/globals.css'
+import { ThemeProvider } from "theme-ui";
+import Meta from "@hackclub/meta";
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
-}
+import theme from "../lib/theme/index";
 
-export default MyApp
+const Custom_App = ({ Component, pageProps }) => {
+  return (
+    <ThemeProvider theme={theme}>
+      <Meta title="APAC Leaderboard" />
+      <Component {...pageProps} />
+    </ThemeProvider>
+  );
+};
+
+export default Custom_App;
