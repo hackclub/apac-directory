@@ -1,5 +1,13 @@
+import { Nav, Hero } from "../components/index";
+
 const Page = () => {
-  return <></>;
+  return (
+    <>
+      <Hero>
+        <Nav />
+      </Hero>
+    </>
+  );
 };
 
 export default Page;

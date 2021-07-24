@@ -6,7 +6,7 @@ import theme from "../lib/theme/index";
 const Custom_App = ({ Component, pageProps }) => {
   return (
     <ThemeProvider theme={theme}>
-      <Meta title="APAC Leaderboard" />
+      <Meta />
       <Component {...pageProps} />
     </ThemeProvider>
   );
