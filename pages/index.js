@@ -1,4 +1,4 @@
-import { Nav, Hero, Intro } from "../components/index";
+import { Nav, Hero, Intro, Search } from "../components/index";
 
 const Page = () => {
   return (
@@ -7,6 +7,7 @@ const Page = () => {
         <Nav />
       </Hero>
       <Intro />
+      <Search />
     </>
   );
 };
