@@ -13,22 +13,21 @@ const Leaderboard = ({ ...props }) => {
       }}
     >
       <Grid sx={{ py: [4], justifyItems: "center" }} columns={[1, 1, 2, 3]}>
-        {[1, 2, 3, 4, 5, 6, 7, 8, 9].map(({}, index) => (
-          <Card rank={index + 1} />
+        {[1, 2, 3, 4, 5, 6, 7, 8, 9].map(({}) => (
+          <Card />
         ))}
       </Grid>
     </Container>
   );
 };
 
-const Card = ({ rank, ...props }) => {
+const Card = ({ ...props }) => {
   return (
     <Box
       as="a"
       href="/"
       sx={{
         textAlign: "center",
-        position: "relative",
         boxShadow: "0px 1px 8px rgb(0 0 0 / 50%)",
         boxShadow: "0 4px 8px rgb(0 0 0 / 13%)",
         my: [2],
@@ -42,25 +41,6 @@ const Card = ({ rank, ...props }) => {
         ":hover": {
           transform: "scale(1.1)",
         },
-
-        ":before":
-          rank == 1
-            ? {
-                content: `""`,
-                display: "block",
-                width: [64],
-                height: [64],
-                backgroundImage:
-                  "url(https://cloud-hagknt1c6-hack-club-bot.vercel.app/0image.png)",
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "contain",
-
-                position: "absolute",
-                right: [2],
-                top: [-3],
-                transform: "rotate(10deg)",
-              }
-            : null,
       }}
       {...props}
     >
@@ -93,8 +73,22 @@ const Card = ({ rank, ...props }) => {
       >
         <b>550</b>
       </p>
-      <p sx={{ my: [0], textAlign: "end", px: [4] }}>
-        <span> {rank} </span>
+      <p sx={{ my: [0], textAlign: "end", px: [3] }}>
+        <span
+          sx={{
+            minWidth: [30],
+            minHeight: [30],
+            display: "inline-flex",
+            bg: "black",
+            color: "white",
+            borderRadius: [1000],
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          {" "}
+          100{" "}
+        </span>
       </p>
     </Box>
   );
