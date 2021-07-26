@@ -85,9 +85,10 @@ const Card = ({ rank, ...props }) => {
           minWidth: [100],
           px: [3],
           py: [2],
+          mt: [1],
+          mb: [0],
           borderRadius: [20],
           display: "inline-block",
-          mt: [1],
           fontSize: [0],
         }}
       >
