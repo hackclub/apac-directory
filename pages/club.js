@@ -1,5 +1,5 @@
 import { Nav } from "../components";
-import { Hero, Stats } from "../components/club/index";
+import { Hero, Stats, Team } from "../components/club/index";
 
 const Club = () => {
   return (
@@ -8,6 +8,7 @@ const Club = () => {
         <Nav />
       </Hero>
       <Stats />
+      <Team />
     </>
   );
 };

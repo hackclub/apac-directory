@@ -35,7 +35,6 @@ const Stats_Bar = ({ ...props }) => {
       }}
       {...props}
     >
-      {" "}
       {data.map(({ ...props }) => (
         <Stat_Element {...props} key={props.attribute} />
       ))}
@@ -45,7 +44,7 @@ const Stats_Bar = ({ ...props }) => {
 
 const Stat_Element = ({ attribute, value, ...props }) => {
   return (
-    <Box sx={{ "*": { my: [0] }, mx: [2, 3, 4], mt: [3] }}>
+    <Box sx={{ "*": { my: [0] }, mx: [2, 3, 4], mt: [3, 2] }}>
       <h4> {attribute}</h4>
       <p>{value}</p>
     </Box>
