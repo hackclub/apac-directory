@@ -25,7 +25,7 @@ const Card = ({ rank, ...props }) => {
   return (
     <Box
       as="a"
-      href="/"
+      href="/club"
       sx={{
         textAlign: "center",
         position: "relative",
@@ -39,8 +39,10 @@ const Card = ({ rank, ...props }) => {
         color: "text",
 
         transition: "0.2s",
-        ":hover": {
-          transform: "scale(1.1)",
+        "@media (pointer:coarse)": {
+          ":hover": {
+            transform: "scale(1.1)",
+          },
         },
 
         ":before":
