@@ -1,6 +1,8 @@
 /**@jsxImportSource theme-ui*/
 
-import { Box, Container, Grid } from "theme-ui";
+import { Box, Container, Flex, Grid } from "theme-ui";
+import { HelpCircle } from "react-feather";
+import Tippy from "@tippyjs/react";
 
 const Stats = ({ ...props }) => {
   return (
@@ -42,12 +44,46 @@ const Stats_Bar = ({ ...props }) => {
   );
 };
 
-const Stat_Element = ({ attribute, value, ...props }) => {
+const Stat_Element = ({ attribute, value, label_element, ...props }) => {
   return (
-    <Box sx={{ "*": { my: [0] }, mx: [2, 3, 4], mt: [3, 2] }}>
-      <h4> {attribute}</h4>
+    <Box sx={{ "*": { my: [0] }, mx: [2, 3, 4], mt: [3, 2] }} {...props}>
+      <Flex sx={{ alignItems: "center" }}>
+        <h4> {attribute}</h4>
+        {label_element}
+      </Flex>
       <p>{value}</p>
     </Box>
+  );
+};
+
+const TippyContainer = ({ children, content, ...props }) => (
+  <Tippy content={content} {...props}>
+    {children}
+  </Tippy>
+);
+
+const Help_Comp = ({ ...props }) => {
+  return (
+    <TippyContainer content="total points">
+      <HelpCircle
+        title="total points"
+        sx={{
+          width: 15,
+          height: 15,
+          ml: [1],
+          cursor: "pointer",
+          outline: "none",
+
+          "@media (pointer:coarse)": {
+            ":focus": {
+              border: "1px solid black",
+              borderRadius: ["circle"],
+            },
+          },
+        }}
+        {...props}
+      />
+    </TippyContainer>
   );
 };
 
@@ -71,6 +107,11 @@ const data = [
   {
     attribute: "points",
     value: "108",
+  },
+  {
+    attribute: "t.points",
+    value: "600",
+    label_element: <Help_Comp />,
   },
 ];
 

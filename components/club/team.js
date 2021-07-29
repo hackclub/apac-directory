@@ -9,7 +9,7 @@ import img_2_src from "../../public/profile_pic2.jpeg";
 const Team = ({ ...props }) => {
   return (
     <Container {...props} sx={{ textAlign: "center", mt: [4] }}>
-      <h3 sx={{ fontSize: [3], fontWeight: "normal" }}>meet the team!</h3>
+      <h3 sx={{ fontSize: [2], fontWeight: "normal" }}>meet the team!</h3>
 
       <Grid columns={[1, 2, 4]} sx={{ gap: 0 }}>
         {[1, 2, 3, 4, 5].map(({ ...props }, idx) => {
