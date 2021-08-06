@@ -1,5 +1,5 @@
 module.exports = {
   images: {
-    domains: ["hackclub.com"],
+    domains: ["hackclub.com", "vercel.app"],
   },
 };

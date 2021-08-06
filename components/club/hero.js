@@ -5,7 +5,7 @@ import Image from "next/image";
 
 import hc_logo_src from "../../public/hc_logo.png";
 
-const Hero = ({ children, ...props }) => {
+const Hero = ({ desc, logo, children, ...props }) => {
   return (
     <Box
       {...props}
@@ -20,13 +20,13 @@ const Hero = ({ children, ...props }) => {
       }}
     >
       {children}
-      <Notification />
-      <Club_Logo />
+      <Notification desc={desc} />
+      <Club_Logo logo={logo} />
     </Box>
   );
 };
 
-const Notification = ({ ...props }) => {
+const Notification = ({ desc, ...props }) => {
   return (
     <Container
       sx={{
@@ -43,15 +43,12 @@ const Notification = ({ ...props }) => {
       }}
       {...props}
     >
-      <p sx={{ fontSize: [0, 1] }}>
-        hack club cgc was founded in 2019 with a dream of making a cool tech
-        community in cgc! we are now a happy team of 13 members.
-      </p>
+      <p sx={{ fontSize: [0, 1] }}>{desc}</p>
     </Container>
   );
 };
 
-const Club_Logo = ({ ...props }) => {
+const Club_Logo = ({ logo, ...props }) => {
   return (
     <Flex
       sx={{
@@ -68,12 +65,14 @@ const Club_Logo = ({ ...props }) => {
       }}
       {...props}
     >
-      <Image
-        src={hc_logo_src}
+      <img
+        src={logo}
         alt="hack club cgc's logo"
-        width="84px"
-        height="84px"
-        objectFit="cover"
+        sx={{
+          width: "84px",
+          height: "84px",
+          objectFit: "cover",
+        }}
       />
     </Flex>
   );

@@ -4,7 +4,15 @@ import { Box, Container, Flex, Grid } from "theme-ui";
 import { HelpCircle } from "react-feather";
 import Tippy from "@tippyjs/react";
 
-const Stats = ({ ...props }) => {
+const Stats = ({
+  ships,
+  hackathons,
+  meetings,
+  events,
+  points,
+  t_points,
+  ...props
+}) => {
   return (
     <Container sx={{ textAlign: "center", pt: [4], mt: [2] }}>
       <h4
@@ -22,12 +30,36 @@ const Stats = ({ ...props }) => {
       >
         Hack Club CGC{" "}
       </h4>
-      <Stats_Bar />
+      <Stats_Bar
+        ships={ships}
+        meetings={meetings}
+        hackathons={hackathons}
+        events={events}
+        points={points}
+        t_points={t_points}
+      />
     </Container>
   );
 };
 
-const Stats_Bar = ({ ...props }) => {
+const Stats_Bar = ({
+  ships,
+  meetings,
+  hackathons,
+  events,
+  points,
+  t_points,
+  ...props
+}) => {
+  const data = [
+    { attribute: "ships", value: ships },
+    { attribute: "meetings", value: meetings },
+    { attribute: "hackathons", value: hackathons },
+    { attribute: "meetings", value: events },
+    { attribute: "points", value: points },
+    { attribute: "t_points", value: t_points, label_element: <Help_Comp /> },
+  ];
+
   return (
     <Container
       sx={{
@@ -111,7 +143,6 @@ const data = [
   {
     attribute: "t.points",
     value: "600",
-    label_element: <Help_Comp />,
   },
 ];
 

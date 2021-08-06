@@ -21,11 +21,18 @@ const Leaderboard = ({ data, ...props }) => {
   );
 };
 
-const Card = ({ rank, name = "dummy name", points = 0, logo, ...props }) => {
+const Card = ({
+  rank,
+  name = "dummy name",
+  points = 0,
+  logo,
+  path,
+  ...props
+}) => {
   return (
     <Box
       as="a"
-      href="/club"
+      href={`/club/${path}`}
       sx={{
         textAlign: "center",
         position: "relative",
