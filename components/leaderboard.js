@@ -3,7 +3,7 @@
 import { darken } from "@theme-ui/color";
 import { Container, Box, Grid } from "theme-ui";
 
-const Leaderboard = ({ ...props }) => {
+const Leaderboard = ({ data, ...props }) => {
   return (
     <Container
       {...props}
@@ -13,15 +13,15 @@ const Leaderboard = ({ ...props }) => {
       }}
     >
       <Grid sx={{ py: [4], justifyItems: "center" }} columns={[1, 1, 2, 3]}>
-        {[1, 2, 3, 4, 5, 6, 7, 8, 9].map(({}, index) => (
-          <Card rank={index + 1} key={index} />
+        {data.map(({ ...props }, index) => (
+          <Card rank={index + 1} key={index} {...props} />
         ))}
       </Grid>
     </Container>
   );
 };
 
-const Card = ({ rank, ...props }) => {
+const Card = ({ rank, name = "dummy name", points = 0, logo, ...props }) => {
   return (
     <Box
       as="a"
@@ -67,15 +67,15 @@ const Card = ({ rank, ...props }) => {
       {...props}
     >
       <p>
-        <b> hack club cgc </b>{" "}
+        <b> {name} </b>{" "}
       </p>
       <img
-        src="hc_logo.png"
+        src={logo}
         sx={{
           height: [64],
           width: [64],
           borderRadius: "circle",
-          bg: "smoke",
+          //bg: "smoke",
           objectFit: "cover",
         }}
       />
@@ -94,7 +94,7 @@ const Card = ({ rank, ...props }) => {
           fontSize: [0],
         }}
       >
-        <b>550</b>
+        <b>{points}</b>
       </p>
       <p sx={{ my: [0], textAlign: "end", px: [4] }}>
         <span> {rank} </span>
