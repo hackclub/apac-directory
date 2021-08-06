@@ -2,8 +2,23 @@
 
 import { Container, Flex } from "theme-ui";
 import { Search as Search_Icon } from "react-feather";
+import { useRef } from "react";
 
-const Search = ({ data, set_data, ...props }) => {
+const Search = ({ original_data, set_data, ...props }) => {
+  const input_ref = useRef();
+
+  console.log("data_copy is", original_data);
+  const on_change = () => {
+    const search = input_ref.current.value;
+
+    const new_data = original_data.filter(({ name }) => {
+      const condition = name.toLowerCase().includes(search.toLowerCase());
+
+      return condition;
+    });
+    set_data(new_data);
+  };
+
   return (
     <Container sx={{ display: "flex", justifyContent: "center" }}>
       <Flex
@@ -26,6 +41,7 @@ const Search = ({ data, set_data, ...props }) => {
       >
         <Search_Icon sx={{ color: "primary" }} />
         <input
+          ref={input_ref}
           placeholder="search hack club"
           sx={{
             flex: 1,
@@ -35,6 +51,7 @@ const Search = ({ data, set_data, ...props }) => {
             ":focus": { outline: "none" },
             bg: "transparent",
           }}
+          onChange={on_change}
         />
       </Flex>
     </Container>

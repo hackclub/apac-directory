@@ -6,13 +6,14 @@ import { Nav, Hero, Intro, Search, Leaderboard } from "../components/index";
 
 const Page = ({ ...props }) => {
   const [data, set_data] = useState(props.data);
+
   return (
     <>
       <Hero>
         <Nav />
       </Hero>
       <Intro />
-      <Search data={data} set_data={set_data} />
+      <Search original_data={props.data} set_data={set_data} />
       <Leaderboard data={data} />
     </>
   );
