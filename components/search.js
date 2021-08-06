@@ -33,6 +33,7 @@ const Search = ({ ...props }) => {
             border: "none",
             textAlign: "center",
             ":focus": { outline: "none" },
+            bg: "transparent",
           }}
         />
       </Flex>

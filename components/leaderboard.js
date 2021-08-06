@@ -14,7 +14,7 @@ const Leaderboard = ({ ...props }) => {
     >
       <Grid sx={{ py: [4], justifyItems: "center" }} columns={[1, 1, 2, 3]}>
         {[1, 2, 3, 4, 5, 6, 7, 8, 9].map(({}, index) => (
-          <Card rank={index + 1} />
+          <Card rank={index + 1} key={index} />
         ))}
       </Grid>
     </Container>
