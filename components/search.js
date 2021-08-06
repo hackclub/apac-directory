@@ -3,7 +3,7 @@
 import { Container, Flex } from "theme-ui";
 import { Search as Search_Icon } from "react-feather";
 
-const Search = ({ ...props }) => {
+const Search = ({ data, set_data, ...props }) => {
   return (
     <Container sx={{ display: "flex", justifyContent: "center" }}>
       <Flex

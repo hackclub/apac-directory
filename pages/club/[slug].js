@@ -4,8 +4,6 @@ import { Hero, Stats, Team } from "../../components/club/index";
 const Club_Page = ({ club_data, team_data }) => {
   return (
     <>
-      {console.log(club_data, team_data)}
-
       <Hero {...club_data}>
         <Nav />
       </Hero>

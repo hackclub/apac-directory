@@ -1,15 +1,18 @@
+import { useState } from "react";
 import { darken } from "@theme-ui/color";
 import { Box } from "theme-ui";
+
 import { Nav, Hero, Intro, Search, Leaderboard } from "../components/index";
 
-const Page = ({ data }) => {
+const Page = ({ ...props }) => {
+  const [data, set_data] = useState(props.data);
   return (
     <>
       <Hero>
         <Nav />
       </Hero>
       <Intro />
-      <Search />
+      <Search data={data} set_data={set_data} />
       <Leaderboard data={data} />
     </>
   );
