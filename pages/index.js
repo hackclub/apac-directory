@@ -19,12 +19,12 @@ const Page = ({ ...props }) => {
   );
 };
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const { get_all_clubs } = require("../lib/firebase/index");
 
   const data = await get_all_clubs();
 
-  console.log(data);
+  //console.log(data);
 
   return {
     props: { data },
