@@ -31,6 +31,7 @@ const Notification = ({ desc, ...props }) => {
     <Container
       sx={{
         backgroundColor: "rgba(248, 232, 232, 0.9)",
+        color: "black",
 
         boxShadow: "0px 0px 10px grey",
 

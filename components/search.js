@@ -50,6 +50,7 @@ const Search = ({ original_data, set_data, ...props }) => {
             textAlign: "center",
             ":focus": { outline: "none" },
             bg: "transparent",
+            color: "white",
           }}
           onChange={on_change}
         />

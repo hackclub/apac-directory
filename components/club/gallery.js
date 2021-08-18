@@ -4,13 +4,13 @@ import Masonry from "react-masonry-css";
 
 import Card from "./card";
 
-import data from "../lib/data";
+import data from "../../lib/data";
 
-const Component = () => (
+const Component = ({ posts_data }) => (
   <>
     <Masonry
       key="masonry"
-      sx={{ bg: "orange", py: [4, 5] }}
+      sx={{ py: [4, 5] }}
       breakpointCols={{
         10000: 4,
         1024: 3,
@@ -21,11 +21,10 @@ const Component = () => (
       className="masonry-posts"
       columnClassName="masonry-posts-column"
     >
-      {data.map(({ ...props }) => (
+      {posts_data.map(({ ...props }) => (
         <Card key={props.img} img_url={props.img} {...props} />
       ))}
     </Masonry>
-    ,
     <style jsx global key="masonry-style">{`
       .masonry-posts {
         display: flex;
