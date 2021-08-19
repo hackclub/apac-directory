@@ -36,7 +36,7 @@ export const getStaticProps = async ({ params }) => {
       team_data,
       posts_data,
     },
-    revalidate: 5, // In seconds
+    revalidate: 1, // In seconds
   };
 };
 
