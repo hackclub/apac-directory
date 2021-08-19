@@ -7,7 +7,6 @@ import { useRef } from "react";
 const Search = ({ original_data, set_data, ...props }) => {
   const input_ref = useRef();
 
-  console.log("data_copy is", original_data);
   const on_change = () => {
     const search = input_ref.current.value;
 
