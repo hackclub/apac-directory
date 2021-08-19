@@ -5,14 +5,15 @@ import Image from "next/image";
 
 import hc_logo_src from "../../public/hc_logo.png";
 
-const Hero = ({ desc, logo, children, ...props }) => {
+const Hero = ({ cover, desc, logo, children, ...props }) => {
   return (
     <Box
       {...props}
       sx={{
         backgroundColor: "purple",
-        backgroundImage:
-          "url(https://cloud-edrmgdnhx-hack-club-bot.vercel.app/0image.png)",
+        backgroundImage: `url(${
+          cover ?? "https://cloud-edrmgdnhx-hack-club-bot.vercel.app/0image.png"
+        })`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
         pb: [5],
