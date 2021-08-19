@@ -9,7 +9,11 @@ import theme from "../lib/theme/index";
 const Custom_App = ({ Component, pageProps }) => {
   return (
     <ThemeProvider theme={theme}>
-      <Meta as={Head} />
+      <Meta
+        as={Head}
+        title="Leaderboard"
+        keyword="hack club apac leaderboard"
+      />
       <Component {...pageProps} />
     </ThemeProvider>
   );
