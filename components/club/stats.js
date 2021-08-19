@@ -5,6 +5,7 @@ import { HelpCircle } from "react-feather";
 import Tippy from "@tippyjs/react";
 
 const Stats = ({
+  name,
   ships,
   hackathons,
   meetings,
@@ -28,7 +29,7 @@ const Stats = ({
         }}
         {...props}
       >
-        Hack Club CGC{" "}
+        {name}
       </h4>
       <Stats_Bar
         ships={ships}
