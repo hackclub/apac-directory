@@ -6,7 +6,7 @@ const Github = () => {
   return (
     <Image
       as="a"
-      href="/"
+      href="https://github.com/hackclub/leaderboard"
       alt="github logo"
       sx={{
         display: "block",
