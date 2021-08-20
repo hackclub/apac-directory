@@ -2,6 +2,8 @@
 
 import { Image } from "theme-ui";
 
+// Github Logo
+
 const Github = () => {
   return (
     <Image
