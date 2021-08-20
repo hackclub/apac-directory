@@ -2,8 +2,18 @@
 
 import { Container, Box, Grid } from "theme-ui";
 import Link from "next/link";
+import { findIndex } from "ramda";
 
-const Leaderboard = ({ data, ...props }) => {
+const find_rank = (obj, dictionary) => {
+  let rank = -1;
+
+  dictionary.forEach(({ name }, idx) => {
+    if (name === obj.name) rank = idx + 1;
+  });
+  return rank;
+};
+
+const Leaderboard = ({ data, original_data, ...props }) => {
   return (
     <Container
       {...props}
@@ -13,9 +23,15 @@ const Leaderboard = ({ data, ...props }) => {
       }}
     >
       <Grid sx={{ py: [4], justifyItems: "center" }} columns={[1, 1, 2, 3]}>
-        {data.map(({ ...props }, index) => (
-          <Card rank={index + 1} key={index} {...props} />
-        ))}
+        {data.map(({ ...props }, index) => {
+          return (
+            <Card
+              rank={find_rank(props, original_data)}
+              key={index}
+              {...props}
+            />
+          );
+        })}
       </Grid>
     </Container>
   );

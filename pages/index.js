@@ -14,7 +14,7 @@ const Page = ({ ...props }) => {
       </Hero>
       <Intro />
       <Search original_data={props.data} set_data={set_data} />
-      <Leaderboard data={data} />
+      <Leaderboard data={data} original_data={props.data} />
     </>
   );
 };
