@@ -1,3 +1,5 @@
+import { ascend, difference, prop, sort, sortWith } from "ramda";
+import { sortBy } from "lodash";
 import { Nav } from "../../components";
 import { Gallery, Hero, Stats, Team } from "../../components/club/index";
 
@@ -24,8 +26,16 @@ export const getStaticProps = async ({ params }) => {
   } = require("../../lib/firebase/index");
 
   const club_data = await get_club_data(slug);
-  const team_data = await get_team_data(slug);
+  const base_team_data = await get_team_data(slug);
   const posts_data = await get_posts_data(slug);
+
+  const leads = sort(
+    ascend(prop("name")),
+    base_team_data.filter(({ is_lead }) => is_lead)
+  );
+  const members = sort(ascend(prop("name")), difference(base_team_data, leads));
+
+  const team_data = [...leads, ...members];
 
   return {
     props: {
