@@ -22,7 +22,12 @@ const Page = ({ ...props }) => {
 export const getStaticProps = async () => {
   const { get_all_clubs } = require("../lib/firebase/index");
 
-  const data = await get_all_clubs();
+  const is_prod = process.env.PROD == "true";
+  const data = (await get_all_clubs()).filter(({ path }) => {
+    if (is_prod && path == "apac") return false;
+
+    return true;
+  });
 
   return {
     props: { data },
