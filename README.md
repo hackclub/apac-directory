@@ -1,8 +1,10 @@
 # Leaderboard 
 Welcome to Hack Club Leaderboard, a Leaderboard like never before 🚀
 This is the frontend of the leaderboard, deployed at [https://leaderboard.hackclub.com](leaderboard.hackclub.com).
-## Docs Guide
-To know the project better, please read the documentation/guide from [here.](https://app.gitbook.com/@bajpaiharsh244/s/apac-leaderboard)
+## Docs/Guide
+To know the project better, please read the documentation from [here.](https://app.gitbook.com/@bajpaiharsh244/s/apac-leaderboard)
+
+<img src="https://raw.githubusercontent.com/bajpai244/indiablogfilehosting/main/files/Screenshot%202021-08-20%20at%207.26.01%20PM.png" alt="image" width="500px" />
 
 ## The Saga
 The Leaderboard acts as a place to give recognition to Hack Clubs that are doing amazing work in the Hack Club circle.
