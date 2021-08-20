@@ -10,9 +10,12 @@ const Intro = ({ ...props }) => {
         <span sx={{ variant: "wavy" }}>Welcome </span>
       </Heading>
       <p sx={{ variant: "para", mt: [3, 4] }}>
-        The leaderboard is a way to appreciate Hack Clubs in the Asia-Pacific
-        region, which are doing amazing work throughout the term! Top the board
-        and win amazing prizes!
+        The leaderboard is a way to appreciate Hack Clubs
+        {
+          //in the Asia-Pacific region
+        }
+        , which are doing amazing work throughout the term! Top the board and
+        win amazing prizes!
       </p>
     </Container>
   );

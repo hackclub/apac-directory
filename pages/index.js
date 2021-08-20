@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { darken } from "@theme-ui/color";
-import { Box } from "theme-ui";
+import { Meta } from "../components/index";
 
 import { Nav, Hero, Intro, Search, Leaderboard } from "../components/index";
 
@@ -9,6 +8,7 @@ const Page = ({ ...props }) => {
 
   return (
     <>
+      <Meta />
       <Hero>
         <Nav />
       </Hero>

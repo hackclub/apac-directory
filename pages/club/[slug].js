@@ -1,10 +1,16 @@
 import { ascend, difference, prop, sort } from "ramda";
-import { Nav } from "../../components";
+import { Nav, Meta } from "../../components";
 import { Gallery, Hero, Stats, Team } from "../../components/club/index";
 
 const Club_Page = ({ club_data, team_data, posts_data }) => {
   return (
     <>
+      <Meta
+        name={club_data.name}
+        title={club_data.name}
+        description={club_data.desc}
+        image={club_data.logo}
+      />
       <Hero {...club_data}>
         <Nav />
       </Hero>
