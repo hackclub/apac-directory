@@ -56,7 +56,7 @@ const Stats_Bar = ({
     { attribute: "ships", value: ships },
     { attribute: "meetings", value: meetings },
     { attribute: "hackathons", value: hackathons },
-    { attribute: "meetings", value: events },
+    { attribute: "events", value: events },
     { attribute: "points", value: points },
     { attribute: "t_points", value: t_points, label_element: <Help_Comp /> },
   ];

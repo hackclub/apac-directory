@@ -1,5 +1,4 @@
-import { ascend, difference, prop, sort, sortWith } from "ramda";
-import { sortBy } from "lodash";
+import { ascend, difference, prop, sort } from "ramda";
 import { Nav } from "../../components";
 import { Gallery, Hero, Stats, Team } from "../../components/club/index";
 
