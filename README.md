@@ -1,34 +1,63 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Leaderboard 
+Welcome to Hack Club Leaderboard, a Leaderboard like never before 🚀
+This is the frontend of the leaderboard, deployed at [https://leaderboard.hackclub.com](leaderboard.hackclub.com).
+## Docs Guide
+To know the project better, please read the documentation/guide from [here.](https://app.gitbook.com/@bajpaiharsh244/s/apac-leaderboard)
 
-## Getting Started
+## The Saga
+The Leaderboard acts as a place to give recognition to Hack Clubs that are doing amazing work in the Hack Club circle.
 
-First, run the development server:
+![leaderboard image](https://raw.githubusercontent.com/bajpai244/indiablogfilehosting/main/files/Screenshot%202021-08-20%20at%203.31.43%20PM.png)
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+The Leaderboard is a real-time platform where hack clubs are given:
+1. recognition for their work.
+2. a digital profile to show amazing people and work happening at their hack club.
+3. a platform to discover other amazing hack clubs in their region.
+4. a complete slack environment to manage their club's presence on the leaderboard.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+> There are points for different activities and the points of all Hack Clubs are reset to 0 after every month!
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+<br/>
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+| Column 1       | Column 2     | Column 3     |
+| :------------- | :----------: | -----------: |
+|  `ship` | 30 points  | when a member of the Hack Club ships a project in `#ship`    |
+| `meetings`   | 50 points | when a club organizes a meeting for their members |
+| `events`  | 200 points |when a club organizes an event|
+| `hackathons` | 500 points |when a club organizes a hackathon|
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Club Pages
+Each hack club on the Leaderboard has its own unique club page.
 
-## Learn More
+![image](https://raw.githubusercontent.com/bajpai244/indiablogfilehosting/main/files/ss1.png)
 
-To learn more about Next.js, take a look at the following resources:
+The club page contains the following things:
+1. cover image
+2. club's description
+3. club's logo
+4. club's stats
+5. club's members 
+6. club's wall
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+![image](https://raw.githubusercontent.com/bajpai244/indiablogfilehosting/main/files/details.png) 
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+> Everything mentioned above is customizable via a bot ranker that we have integrated into Hack Club's Slack. 
+> So Hack Clubs have full control over their club's page without the requirement of any middlemen.
 
-## Deploy on Vercel
+## Club Wall
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Each club page has a club wall, which contains images and videos from a club's events, meets, and other activities.
+![image](https://raw.githubusercontent.com/bajpai244/indiablogfilehosting/main/files/wall.png)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Meet our Developer Team
+
+> This project required a very big force of software developers let's meet them!
+
+![image](https://raw.githubusercontent.com/bajpai244/indiablogfilehosting/main/files/dev_army.png)
+
+## Why star this repo
+> Why should you star this repo, let's see ...👀
+
+![image](https://raw.githubusercontent.com/bajpai244/indiablogfilehosting/main/files/start_repo.png)
+
+> Anway if you like this project then that already makes me happy, keep hacking and keep the hacker spirit alive.
