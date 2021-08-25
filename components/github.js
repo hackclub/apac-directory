@@ -11,6 +11,7 @@ const Github = () => {
       href="https://github.com/hackclub/leaderboard"
       alt="github logo"
       sx={{
+        zIndex: 1000,
         display: "block",
         position: "fixed",
         bottom: "20px",
