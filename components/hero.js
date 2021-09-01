@@ -17,7 +17,7 @@ const Hero = ({ children, ...props }) => {
     >
       {children}
       <Container sx={{ my: [4], pb: [4, 3] }}>
-        <Heading sx={{ fontSize: [2, 4, 5] }}>Hack Club APAC's:white</Heading>
+        <Heading sx={{ fontSize: [2, 4, 5] }}>Hack Club APAC</Heading>
 
         <Heading
           variant="ultratitle"
