@@ -1,6 +1,12 @@
 import { ascend, difference, prop, sort } from "ramda";
 import { Nav, Meta } from "../../components";
-import { Gallery, Hero, Stats, Team } from "../../components/club/index";
+import {
+  Gallery,
+  Hero,
+  Socials,
+  Stats,
+  Team,
+} from "../../components/club/index";
 
 const Club_Page = ({ club_data, team_data, posts_data }) => {
   return (

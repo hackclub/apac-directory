@@ -3,6 +3,7 @@
 import { Box, Container, Flex, Grid } from "theme-ui";
 import { HelpCircle } from "react-feather";
 import Tippy from "@tippyjs/react";
+import Socials from "./socials";
 
 const Stats = ({
   name,
@@ -12,6 +13,10 @@ const Stats = ({
   events,
   points,
   t_points,
+  twitter,
+  linkedin,
+  instagram,
+  github,
   ...props
 }) => {
   return (
@@ -31,6 +36,9 @@ const Stats = ({
       >
         {name}
       </h4>
+
+      <Socials {...{ twitter, linkedin, instagram, github }} />
+
       <Stats_Bar
         ships={ships}
         meetings={meetings}
