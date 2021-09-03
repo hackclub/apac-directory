@@ -17,6 +17,7 @@ const Stats = ({
   linkedin,
   instagram,
   github,
+  website,
   ...props
 }) => {
   return (
@@ -37,7 +38,7 @@ const Stats = ({
         {name}
       </h4>
 
-      <Socials {...{ twitter, linkedin, instagram, github }} />
+      <Socials {...{ twitter, linkedin, instagram, github, website }} />
 
       <Stats_Bar
         ships={ships}
