@@ -8,7 +8,9 @@ import flag_src from "../public/flag.png";
 const Nav = ({ ...props }) => {
   return (
     <Container {...props} sx={{ display: "flex", alignItems: "center" }}>
-      <Image src={flag_src} width={72 * 1.5} height={40 * 1.5} />
+      <a href="https://leaderboard.hackclub.com">
+       <Image src={flag_src} width={72 * 1.5} height={40 * 1.5} />
+      </a>
       <Button
         as="a"
         href="https://hackclub.com"
