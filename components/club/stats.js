@@ -1,9 +1,12 @@
-/**@jsxImportSource theme-ui*/
+/**
+ * @format
+ * @jsxImportSource theme-ui
+ */
 
-import { Box, Container, Flex, Grid } from "theme-ui";
-import { HelpCircle } from "react-feather";
-import Tippy from "@tippyjs/react";
-import Socials from "./socials";
+import { Box, Container, Flex, Grid } from 'theme-ui';
+import { HelpCircle } from 'react-feather';
+import Tippy from '@tippyjs/react';
+import Socials from './socials';
 
 const Stats = ({
   name,
@@ -21,14 +24,14 @@ const Stats = ({
   ...props
 }) => {
   return (
-    <Container sx={{ textAlign: "center", pt: [4], mt: [2] }}>
+    <Container sx={{ textAlign: 'center', pt: [4], mt: [2] }}>
       <h4
         sx={{
-          display: "inline-block",
+          display: 'inline-block',
           px: [4],
           py: [3],
-          bg: "primary",
-          color: "white",
+          bg: 'primary',
+          color: 'white',
           borderRadius: [10],
           mx: [2],
           fontSize: [0, 1],
@@ -45,8 +48,6 @@ const Stats = ({
         meetings={meetings}
         hackathons={hackathons}
         events={events}
-        points={points}
-        t_points={t_points}
       />
     </Container>
   );
@@ -62,20 +63,18 @@ const Stats_Bar = ({
   ...props
 }) => {
   const data = [
-    { attribute: "ships", value: ships },
-    { attribute: "meetings", value: meetings },
-    { attribute: "hackathons", value: hackathons },
-    { attribute: "events", value: events },
-    { attribute: "points", value: points },
-    { attribute: "t_points", value: t_points, label_element: <Help_Comp /> },
+    { attribute: 'ships', value: ships },
+    { attribute: 'meetings', value: meetings },
+    { attribute: 'hackathons', value: hackathons },
+    { attribute: 'events', value: events },
   ];
 
   return (
     <Container
       sx={{
-        display: "flex",
-        justifyContent: "center",
-        flexWrap: "wrap",
+        display: 'flex',
+        justifyContent: 'center',
+        flexWrap: 'wrap',
       }}
       {...props}
     >
@@ -88,8 +87,8 @@ const Stats_Bar = ({
 
 const Stat_Element = ({ attribute, value, label_element, ...props }) => {
   return (
-    <Box sx={{ "*": { my: [0] }, mx: [2, 3, 4], mt: [3, 2] }} {...props}>
-      <Flex sx={{ alignItems: "center" }}>
+    <Box sx={{ '*': { my: [0] }, mx: [2, 3, 4], mt: [3, 2] }} {...props}>
+      <Flex sx={{ alignItems: 'center' }}>
         <h4> {attribute}</h4>
         {label_element}
       </Flex>
@@ -113,13 +112,13 @@ const Help_Comp = ({ ...props }) => {
           width: 15,
           height: 15,
           ml: [1],
-          cursor: "pointer",
-          outline: "none",
+          cursor: 'pointer',
+          outline: 'none',
 
-          "@media (pointer:coarse)": {
-            ":focus": {
-              border: "1px solid black",
-              borderRadius: ["circle"],
+          '@media (pointer:coarse)': {
+            ':focus': {
+              border: '1px solid black',
+              borderRadius: ['circle'],
             },
           },
         }}
@@ -131,28 +130,28 @@ const Help_Comp = ({ ...props }) => {
 
 const data = [
   {
-    attribute: "ships",
-    value: "30",
+    attribute: 'ships',
+    value: '30',
   },
   {
-    attribute: "hackathons",
-    value: "12",
+    attribute: 'hackathons',
+    value: '12',
   },
   {
-    attribute: "meetings",
-    value: "42",
+    attribute: 'meetings',
+    value: '42',
   },
   {
-    attribute: "events",
-    value: "24",
+    attribute: 'events',
+    value: '24',
   },
   {
-    attribute: "points",
-    value: "108",
+    attribute: 'points',
+    value: '108',
   },
   {
-    attribute: "t.points",
-    value: "600",
+    attribute: 't.points',
+    value: '600',
   },
 ];
 
