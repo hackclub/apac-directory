@@ -1,24 +1,25 @@
-import React from "react";
-import Head from "next/head";
+/** @format */
+
+import React from 'react';
+import Head from 'next/head';
 
 const makeTitle = (title, name) =>
   title === name ? title : `${title} – ${name}`;
 
 const site_description =
-  "Welcome to Hack Club Leaderboard, A place where we give recoginition to Hack Clubs doing amazing work";
-const side_keywords =
-  "leaderboard,hack club,hack club leaderboard,club profiles";
+  'The directory is a listing of Hack Clubs in the APAC region, click on a Hack Club to explore more about them!';
+const site_keywords = 'directory,hack club,hack club directory,club profiles';
 const site_og_img =
-  "https://raw.githubusercontent.com/bajpai244/indiablogfilehosting/main/files/Screenshot%202021-08-20%20at%203.31.43%20PM.png";
+  'https://cloud-kut3a9gjm-hack-club-bot.vercel.app/0image.png';
 
 const Meta = ({
   as: ElementType = Head,
-  name = "Hack Club", // site name
-  title = "Leaderboard", // page title
+  name = 'Hack Club', // site name
+  title = 'Directory', // page title
   description = site_description,
   image = site_og_img,
-  color = "#ec3750",
-  manifest = "https://assets.hackclub.com/favicons/site.webmanifest",
+  color = '#ec3750',
+  manifest = 'https://assets.hackclub.com/favicons/site.webmanifest',
   children,
 }) => (
   <ElementType>
@@ -33,6 +34,7 @@ const Meta = ({
       name="twitter:title"
       content={makeTitle(title, name)}
     />
+    <meta name="keywords" content={site_keywords} />
     {description && (
       <React.Fragment>
         <meta key="desc" name="description" content={description} />

@@ -64,25 +64,6 @@ const Card = ({ name, points, logo, path, ...props }) => {
               transform: 'scale(1.1)',
             },
           },
-
-          // ":before":
-          //   rank == 1
-          //     ? {
-          //         content: `""`,
-          //         display: "block",
-          //         width: [64],
-          //         height: [64],
-          //         backgroundImage:
-          //           "url(https://cloud-hagknt1c6-hack-club-bot.vercel.app/0image.png)",
-          //         backgroundRepeat: "no-repeat",
-          //         backgroundSize: "contain",
-
-          //         position: "absolute",
-          //         right: [2],
-          //         top: [-3],
-          //         transform: "rotate(10deg)",
-          //       }
-          //     : null,
         }}
         {...props}
       >
