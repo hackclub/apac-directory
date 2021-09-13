@@ -3,7 +3,7 @@
  * @jsxImportSource theme-ui
  */
 
-import { Container, Box, Grid } from 'theme-ui';
+import { Container, Box, Grid, Button } from 'theme-ui';
 import Link from 'next/link';
 import { findIndex } from 'ramda';
 
@@ -81,7 +81,9 @@ const Card = ({ name, points, logo, path, ...props }) => {
             objectFit: 'cover',
           }}
         />
-        <h4 sx={{ my: [0] }}>POINTS</h4>
+        <div sx={{ mt: [3] }}>
+          <Button sx={{ px: [4] }}>Visit</Button>
+        </div>
       </Box>
     </Link>
   );
