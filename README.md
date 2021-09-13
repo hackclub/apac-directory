@@ -9,13 +9,13 @@ This is the frontend of the Directory, deployed at [https://apacdirectory.hackcl
 
 To know the project better, please read the documentation from [here.](https://app.gitbook.com/@bajpaiharsh244/s/apac-directory)
 
-<img src="https://cloud-kut3a9gjm-hack-club-bot.vercel.app/0image.png" alt="image" width="500px" />
+<img src="https://cloud-7jihrwgbn-hack-club-bot.vercel.app/0image.png" alt="image" width="500px" />
 
 ## The Saga
 
 The Directory acts as a place to explore Hack Clubs in the APAC region and explore the amazing work being done by them in the Hack Club circle.
 
-![Directory image](https://raw.githubusercontent.com/bajpai244/indiablogfilehosting/main/files/Screenshot%202021-08-20%20at%203.31.43%20PM.png)
+![Directory image](https://cloud-82lkrqpe8-hack-club-bot.vercel.app/0image.png)
 
 The Directory is a real-time platform where hack clubs are given:
 
