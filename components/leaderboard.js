@@ -51,6 +51,7 @@ const Card = ({ name, points, logo, path, ...props }) => {
           boxShadow: '0px 1px 8px rgb(0 0 0 / 50%)',
           boxShadow: '0 4px 8px rgb(0 0 0 / 13%)',
           bg: 'black',
+          my: [2],
           pt: [2],
           pb: [4],
           borderRadius: [10],
