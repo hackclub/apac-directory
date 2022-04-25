@@ -36,6 +36,8 @@ export const getStaticProps = async ({ params }) => {
     get_posts_data,
   } = require("../../lib/firebase/index");
 
+  const {get_slack_username, scrapbook_exists} = require("../../lib/utils/index");
+
   const club_data = await get_club_data(slug);
   const base_team_data = await get_team_data(slug);
   const posts_data = await get_posts_data(slug);
@@ -46,7 +48,12 @@ export const getStaticProps = async ({ params }) => {
   );
   const members = sort(ascend(prop("name")), difference(base_team_data, leads));
 
-  const team_data = [...leads, ...members];
+  let team_data = [...leads, ...members] 
+    
+    for(let member of team_data){
+    const username = await get_slack_username(member.slack_id)
+    member.scrapbook_url = (await scrapbook_exists(username))? `https://scrapbook.hackclub.com/${username}` : null
+    }
 
   return {
     props: {
