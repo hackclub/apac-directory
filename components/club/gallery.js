@@ -4,8 +4,6 @@ import Masonry from "react-masonry-css";
 
 import Card from "./card";
 
-import data from "../../lib/data";
-
 const Component = ({ posts_data }) => (
   <>
     <Masonry
