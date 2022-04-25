@@ -10,6 +10,8 @@
   "dependencies": {
     "@hackclub/meta": "^1.1.32",
     "@hackclub/theme": "^0.3.3",
+    "@slack/bolt": "^3.11.0",
+    "@slack/web-api": "^6.7.1",
     "@theme-ui/color": "^0.10.0",
     "@tippyjs/react": "^4.2.5",
     "axios": "^0.26.1",
