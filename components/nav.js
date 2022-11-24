@@ -8,10 +8,10 @@ import flag_src from "../public/flag.png";
 const Nav = ({ ...props }) => {
   return (
     <>
-      <Box bg="red" sx={{ fontWeight: "bold" }}>
+      <Box bg="red" sx={{ fontWeight: "bold", py: 2 }}>
         APAC Directory is being phased out in favour of Scrapbook. Join #scrapbook on {" "}
-        <Link href="https://hackclub.com/slack">the Hack Club Slack</Link> {" "}
-        to get started or <Link href="mailto:zach@hackclub.com">reach out</Link> for more details.
+        <Link href="https://hackclub.com/slack" sx={{color: 'white'}}>the Hack Club Slack</Link> {" "}
+        to get started or <Link href="mailto:zach@hackclub.com" sx={{color: 'white'}}>reach out</Link> for more details.
       </Box>
       <Container {...props} sx={{ display: "flex", alignItems: "center" }}>
         <a href="https://leaderboard.hackclub.com">
